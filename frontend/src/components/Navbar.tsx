@@ -60,7 +60,10 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-4">
           <ThemeToggle />
           <LanguageSelector />
-          <Button className="bg-[#1e293b] dark:bg-white text-white dark:text-[#1e293b] hover:bg-[#F4C95D] hover:text-[#1e293b] rounded-lg px-6 font-bold uppercase text-xs tracking-wider shadow-md transition-colors">
+          <Button
+            onClick={() => document.querySelector("#transmision")?.scrollIntoView({ behavior: "smooth" })}
+            className="bg-[#1e293b] dark:bg-white text-white dark:text-[#1e293b] hover:bg-[#F4C95D] hover:text-[#1e293b] rounded-lg px-6 font-bold uppercase text-xs tracking-wider shadow-md transition-colors"
+          >
             {t('nav.live', 'En Vivo')}
           </Button>
         </div>
